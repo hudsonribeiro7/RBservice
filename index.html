@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RB Service — Reformas de Alto Padrão em Florianópolis. 15 anos de experiência em Drywall, Gesso, Elétrica, Pintura e Ar Condicionado.">
+  <meta name="keywords" content="reforma, drywall, gesso, pintura, elétrica, ar condicionado, Florianópolis, RB Service">
+  <meta name="author" content="Hudson Ribeiro">
+  <meta property="og:title" content="RB Service — Obras Sem Imprevistos">
+  <meta property="og:description" content="15 anos transformando espaços em Florianópolis com rigor técnico e acabamento impecável.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hudsonribeiro.github.io/rbservice">
+  <title>Hudson Ribeiro — RB Service | Reformas de Alto Padrão</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── CURSOR ─────────────────────────────────────── -->
+  <div id="cursor-dot"  aria-hidden="true"></div>
+  <div id="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ── NOISE OVERLAY ──────────────────────────────── -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- ── AMBIENT ORBS ───────────────────────────────── -->
+  <div class="orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════════════ -->
+  <div class="nav-wrap">
+    <nav role="navigation" aria-label="Menu principal">
+      <a href="#home" class="nav-brand" aria-label="RB Service — Início">
+        <span class="nav-brand-dot" aria-hidden="true"></span>
+        RB SERVICE
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#portfolio">Projetos</a></li>
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#contact" class="nav-cta">Orçamento</a></li>
+      </ul>
+
+      <button class="nav-hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- ── MOBILE MENU ────────────────────────────────── -->
+  <div class="mobile-overlay" id="overlay" aria-hidden="true"></div>
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Menu mobile" aria-modal="true">
+    <button class="mobile-menu-close" id="menuClose" aria-label="Fechar menu">✕</button>
+    <div class="mobile-menu-brand">RB SERVICE</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">Sobre</a>
+      <a href="#portfolio">Projetos</a>
+      <a href="#services">Serviços</a>
+      <a href="#contact">Orçamento</a>
+    </nav>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════ -->
+  <section id="home" aria-label="Início">
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <p class="hero-eyebrow">// Hudson Ribeiro — Florianópolis, SC</p>
+
+      <h1 class="hero-title">
+        OBRAS<br>
+        <span class="outline">SEM</span><br>
+        <span class="accent">PESA&shy;DELOS</span>
+      </h1>
+
+      <p class="hero-sub">
+        15 anos transformando espaços em Florianópolis com rigor técnico,
+        transparência total e acabamento impecável. O mesmo padrão aplicado ao código.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">
+          Solicitar Orçamento <i class="fas fa-arrow-right" aria-hidden="true"></i>
+        </a>
+        <a href="#portfolio" class="btn-ghost">
+          Ver Projetos <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <div class="hero-stats" aria-label="Números da RB Service">
+        <div class="hero-stat">
+          <div class="hero-stat-num">15<span>+</span></div>
+          <div class="hero-stat-label">Anos de mercado</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">500<span>+</span></div>
+          <div class="hero-stat-label">Obras entregues</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">98<span>%</span></div>
+          <div class="hero-stat-label">Satisfação</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── MARQUEE ────────────────────────────────────── -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Drywall</span><span class="accent-m">✦</span>
+      <span>Gesso</span><span class="accent-m">✦</span>
+      <span>Reformas</span><span class="accent-m">✦</span>
+      <span>Elétrica</span><span class="accent-m">✦</span>
+      <span>Pintura</span><span class="accent-m">✦</span>
+      <span>Ar Condicionado</span><span class="accent-m">✦</span>
+      <span>Alto Padrão</span><span class="accent-m">✦</span>
+      <span>Florianópolis</span><span class="accent-m">✦</span>
+      <!-- Duplicate for seamless loop -->
+      <span>Drywall</span><span class="accent-m">✦</span>
+      <span>Gesso</span><span class="accent-m">✦</span>
+      <span>Reformas</span><span class="accent-m">✦</span>
+      <span>Elétrica</span><span class="accent-m">✦</span>
+      <span>Pintura</span><span class="accent-m">✦</span>
+      <span>Ar Condicionado</span><span class="accent-m">✦</span>
+      <span>Alto Padrão</span><span class="accent-m">✦</span>
+      <span>Florianópolis</span><span class="accent-m">✦</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════════════════ -->
+  <section id="about" aria-label="Sobre Hudson Ribeiro">
+    <div class="section-inner">
+      <div class="about-grid">
+
+        <div class="about-img-wrap reveal">
+          <img
+            class="about-img-main"
+            src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&w=700"
+            alt="Hudson Ribeiro — Fundador da RB Service"
+            loading="lazy"
+          >
+          <div class="about-img-badge" aria-label="15 anos de excelência">
+            <div class="about-img-badge-num">15</div>
+            <div class="about-img-badge-label">Anos de<br>Excelência</div>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <div class="section-tag reveal">// Fundador</div>
+          <h2 class="section-title-xl reveal">HUDSON<br>RIBEIRO</h2>
+          <p class="about-lead reveal reveal-delay-1">
+            Fundador da <strong>RB Service</strong>, referência em reformas
+            de alto padrão na Grande Florianópolis.
+          </p>
+          <p class="about-body reveal reveal-delay-2">
+            Mais de 15 anos entregando obras com transparência, prazo e acabamento
+            que fala por si. Cada projeto é tratado como se fosse a própria casa:
+            sem atalhos, sem surpresas, sem pesadelos.<br><br>
+            Hoje, esse mesmo rigor técnico é aplicado no desenvolvimento de sistemas
+            em PHP e Python — porque arquitetura de código e arquitetura de paredes
+            exigem a mesma obsessão por fundação sólida.
+          </p>
+          <div class="dual-badges reveal reveal-delay-3">
+            <span class="badge badge-coral">Reformas Premium</span>
+            <span class="badge badge-lime">PHP / Python</span>
+            <span class="badge badge-gold">Grande Florianópolis</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STATS BAR ──────────────────────────────────── -->
+  <div class="stats-bar" aria-label="Números em destaque">
+    <div class="section-inner">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-num">500<span class="coral">+</span></div>
+          <div class="stat-label">Obras Executadas</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="stat-num">48<span class="coral">k</span></div>
+          <div class="stat-label">M² Construídos</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-num">98<span class="coral">%</span></div>
+          <div class="stat-label">Feedbacks Positivos</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-num">12<span class="coral">+</span></div>
+          <div class="stat-label">Obras em Andamento</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════
+       PORTFOLIO / CAROUSEL
+  ══════════════════════════════════════════════════ -->
+  <section id="portfolio" aria-label="Portfólio de projetos">
+    <div class="section-inner">
+      <div class="section-tag reveal">// Portfólio</div>
+      <h2 class="section-title-xl reveal">PROJETOS<br>ENTREGUES</h2>
+    </div>
+
+    <div class="carousel-outer">
+      <div class="carousel-track" role="list" aria-label="Projetos em destaque">
+
+        <!-- ── Cards Set 1 ── -->
+        <article class="c-card" role="listitem">
+          <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&w=700"
+               alt="Residência Jurerê — Reforma completa 280m²" loading="lazy">
+          <div class="c-card-body">
+            <div class="c-card-tag">Reforma Completa</div>
+            <div class="c-card-title">Residência Jurerê</div>
+            <div class="c-card-meta">Drywall · Gesso · Pintura — 280m²</div>
+          </div>
+        </article>
+
+        <article class="c-card" role="listitem">
+          <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&w=700"
+               alt="Apartamento Beira Mar — Alto padrão 140m²" loading="lazy">
+          <div class="c-card-body">
+            <div class="c-card-tag">Alto Padrão</div>
+            <div class="c-card-title">Apartamento Beira Mar</div>
+            <div class="c-card-meta">Gesso · Elétrica · AC — 140m²</div>
+          </div>
+        </article>
+
+        <article class="c-card" role="listitem">
+          <img src="https://images.pexels.com/photos/2724748/pexels-photo-2724748.jpeg?auto=compress&w=700"
+               alt="Clínica Centro — Obra comercial 320m²" loading="lazy">
+          <div class="c-card-body">
+            <div class="c-card-tag">Comercial</div>
+            <div class="c-card-title">Clínica Centro</div>
+            <div class="c-card-meta">Drywall · Divisórias — 320m²</div>
+          </div>
+        </article>
+
+        <article class="c-card" role="listitem">
+          <img src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&w=700"
+               alt="Penthouse Coqueiros — Reforma total 380m²" loading="lazy">
+          <div class="c-card-body">
+            <div class="c-card-tag">Reforma Completa</div>
+            <div class="c-card-title">Penthouse Coqueiros</div>
+            <div class="c-card-meta">Reforma Total — 380m²</div>
+          </div>
+        </article>
+
+        <article class="c-card" role="listitem">
+          <img src="https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&w=700"
+               alt="Casa Córrego Grande — Interiores 90m²" loading="lazy">
+          <div class="c-card-body">
+            <div class="c-card-tag">Interiores</div>
+            <div class="c-card-title">Casa Córrego Grande</div>
+            <div class="c-card-meta">Cozinha · Banheiros — 90m²</div>
+          </div>
+        </article>
+
+        <article class="c-card" role="listitem">
+          <img src="https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg?auto=compress&w=700"
+               alt="Edifício Trindade — Fachada 600m²" loading="lazy">
+          <div class="c-card-body">
+            <div class="c-card-tag">Fachada</div>
+            <div class="c-card-title">Edifício Trindade</div>
+            <div class="c-card-meta">ACM · Pintura — 600m²</div>
+          </div>
+        </article>
+
+        <!-- ── Cards Set 2 (duplicate for seamless loop) ── -->
+        <article class="c-card" role="listitem" aria-hidden="true">
+          <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&w=700"
+               alt="" loading="lazy">
+          <div class="c-card-body">
+            <div class="c-card-tag">Reforma Completa</div>
+            <div class="c-card-title">Residência Jurerê</div>
+            <div class="c-card-meta">Drywall · Gesso · Pintura — 280m²</div>
+          </div>
+        </article>
+
+        <article class="c-card" role="listitem" aria-hidden="true">
+          <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&w=700"
+               alt="" loading="lazy">
+          <div class="c-card-body">
+            <div class="c-card-tag">Alto Padrão</div>
+            <div class="c-card-title">Apartamento Beira Mar</div>
+            <div class="c-card-meta">Gesso · Elétrica · AC — 140m²</div>
+          </div>
+        </article>
+
+        <article class="c-card" role="listitem" aria-hidden="true">
+          <img src="https://images.pexels.com/photos/2724748/pexels-photo-2724748.jpeg?auto=compress&w=700"
+               alt="" loading="lazy">
+          <div class="c-card-body">
+            <div class="c-card-tag">Comercial</div>
+            <div class="c-card-title">Clínica Centro</div>
+            <div class="c-card-meta">Drywall · Divisórias — 320m²</div>
+          </div>
+        </article>
+
+        <article class="c-card" role="listitem" aria-hidden="true">
+          <img src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&w=700"
+               alt="" loading="lazy">
+          <div class="c-card-body">
+            <div class="c-card-tag">Reforma Completa</div>
+            <div class="c-card-title">Penthouse Coqueiros</div>
+            <div class="c-card-meta">Reforma Total — 380m²</div>
+          </div>
+        </article>
+
+        <article class="c-card" role="listitem" aria-hidden="true">
+          <img src="https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&w=700"
+               alt="" loading="lazy">
+          <div class="c-card-body">
+            <div class="c-card-tag">Interiores</div>
+            <div class="c-card-title">Casa Córrego Grande</div>
+            <div class="c-card-meta">Cozinha · Banheiros — 90m²</div>
+          </div>
+        </article>
+
+        <article class="c-card" role="listitem" aria-hidden="true">
+          <img src="https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg?auto=compress&w=700"
+               alt="" loading="lazy">
+          <div class="c-card-body">
+            <div class="c-card-tag">Fachada</div>
+            <div class="c-card-title">Edifício Trindade</div>
+            <div class="c-card-meta">ACM · Pintura — 600m²</div>
+          </div>
+        </article>
+
+      </div><!-- /.carousel-track -->
+    </div><!-- /.carousel-outer -->
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       SERVICES
+  ══════════════════════════════════════════════════ -->
+  <section id="services" aria-label="Serviços">
+    <div class="section-inner">
+      <div class="section-tag reveal">// O que fazemos</div>
+      <h2 class="section-title-xl reveal">SERVIÇOS</h2>
+
+      <div class="services-grid">
+        <div class="srv-card reveal">
+          <span class="srv-num" aria-hidden="true">01</span>
+          <div class="srv-icon" aria-hidden="true"><i class="fas fa-layer-group"></i></div>
+          <h3 class="srv-title">DRYWALL & GESSO</h3>
+          <p class="srv-desc">Divisórias, forros e revestimentos com acabamento impecável. Do projeto à entrega, sem improvisos.</p>
+        </div>
+        <div class="srv-card reveal reveal-delay-1">
+          <span class="srv-num" aria-hidden="true">02</span>
+          <div class="srv-icon" aria-hidden="true"><i class="fas fa-hammer"></i></div>
+          <h3 class="srv-title">REFORMAS COMPLETAS</h3>
+          <p class="srv-desc">Apartamentos, residências e escritórios. Coordenação total — você só aprova.</p>
+        </div>
+        <div class="srv-card reveal reveal-delay-2">
+          <span class="srv-num" aria-hidden="true">03</span>
+          <div class="srv-icon" aria-hidden="true"><i class="fas fa-bolt"></i></div>
+          <h3 class="srv-title">ELÉTRICA</h3>
+          <p class="srv-desc">Instalações completas, quadros e iluminação. Segurança com conformidade às normas ABNT.</p>
+        </div>
+        <div class="srv-card reveal reveal-delay-1">
+          <span class="srv-num" aria-hidden="true">04</span>
+          <div class="srv-icon" aria-hidden="true"><i class="fas fa-paint-roller"></i></div>
+          <h3 class="srv-title">PINTURA</h3>
+          <p class="srv-desc">Acabamento que dura. Texturas, grafiato e pintura lisa — cada detalhe tratado como assinatura.</p>
+        </div>
+        <div class="srv-card reveal reveal-delay-2">
+          <span class="srv-num" aria-hidden="true">05</span>
+          <div class="srv-icon" aria-hidden="true"><i class="fas fa-wind"></i></div>
+          <h3 class="srv-title">AR CONDICIONADO</h3>
+          <p class="srv-desc">Instalação e manutenção de split, multi-split e VRF. Eficiência energética garantida.</p>
+        </div>
+        <div class="srv-card reveal reveal-delay-3">
+          <span class="srv-num" aria-hidden="true">06</span>
+          <div class="srv-icon" aria-hidden="true"><i class="fas fa-code"></i></div>
+          <h3 class="srv-title">SISTEMAS WEB</h3>
+          <p class="srv-desc">PHP e Python com a mesma obsessão por estrutura. Sistemas que funcionam sem pesadelos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       CODE IDENTITY
+  ══════════════════════════════════════════════════ -->
+  <section id="code" aria-label="Desenvolvimento de sistemas">
+    <div class="section-inner">
+      <div class="code-grid">
+
+        <div class="code-terminal reveal" role="img" aria-label="Terminal Python mostrando a filosofia de Hudson Ribeiro">
+          <div class="terminal-bar">
+            <div class="t-dot t-dot-r"></div>
+            <div class="t-dot t-dot-y"></div>
+            <div class="t-dot t-dot-g"></div>
+            <span class="terminal-title">hudson@rbservice — ~/projetos</span>
+          </div>
+          <div class="terminal-body">
+<pre><span class="t-comment"># O mesmo rigor. Dois mundos.</span>
+
+<span class="t-blue">class</span> <span class="t-yellow">HudsonRibeiro</span>:
+    <span class="t-blue">def</span> <span class="t-green">__init__</span>(self):
+        self.<span class="t-coral">anos_experiencia</span> = <span class="t-yellow">15</span>
+        self.<span class="t-coral">especialidades</span> = [
+            <span class="t-green">"Reformas Alto Padrão"</span>,
+            <span class="t-green">"Drywall &amp; Gesso"</span>,
+            <span class="t-green">"PHP / Python"</span>,
+        ]
+        self.<span class="t-coral">filosofia</span> = <span class="t-green">"Sem atalhos. Sem pesadelos."</span>
+
+    <span class="t-blue">def</span> <span class="t-green">entregar</span>(self, projeto):
+        <span class="t-comment"># Prazo. Qualidade. Transparência.</span>
+        <span class="t-blue">return</span> projeto.<span class="t-coral">transformar</span>(
+            rigor=<span class="t-yellow">True</span>,
+            surpresas=<span class="t-yellow">False</span>
+        )
+
+<span class="t-comment">$ python hudson.py</span>
+<span class="t-green">✓ Projeto entregue. Cliente satisfeito.</span>
+<span class="t-cursor" aria-hidden="true"></span></pre>
+          </div>
+        </div>
+
+        <div class="code-text">
+          <div class="section-tag reveal">// Dual expertise</div>
+          <h2 class="section-title-xl reveal" style="font-size:clamp(40px,5vw,72px)">
+            CONSTRUÇÃO<br>&amp; CÓDIGO
+          </h2>
+          <p class="about-body reveal reveal-delay-1">
+            O engenheiro que entende de paredes sabe que uma estrutura sem
+            fundação colapsa. O mesmo vale para software. Após 15 anos garantindo
+            que cada centímetro de reboco ficasse no lugar, Hudson trouxe essa
+            mentalidade para o desenvolvimento de sistemas.
+          </p>
+          <p class="about-body reveal reveal-delay-2">
+            <strong style="color:var(--lime)">PHP e Python</strong> escritos
+            com a mesma obsessão por acabamento que transforma uma obra comum em referência.
+          </p>
+          <div class="dual-badges reveal reveal-delay-3">
+            <span class="badge badge-lime">Python</span>
+            <span class="badge badge-coral">PHP</span>
+            <span class="badge badge-muted">APIs REST</span>
+            <span class="badge badge-muted">Automações</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       CONTACT — MULTI-STEP FORM
+  ══════════════════════════════════════════════════ -->
+  <section id="contact" aria-label="Formulário de orçamento">
+    <div class="section-inner">
+      <div class="section-tag reveal">// Vamos conversar</div>
+      <h2 class="section-title-xl reveal">ORÇAMENTO</h2>
+
+      <div class="contact-wrap">
+
+        <!-- Info -->
+        <address class="contact-info" style="font-style:normal">
+          <div class="contact-info-item reveal">
+            <div class="ci-icon" aria-hidden="true"><i class="fab fa-whatsapp"></i></div>
+            <div>
+              <div class="ci-label">WhatsApp</div>
+              <div class="ci-val">(48) 98492-7764</div>
+            </div>
+          </div>
+          <div class="contact-info-item reveal reveal-delay-1">
+            <div class="ci-icon" aria-hidden="true"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="ci-label">E-mail</div>
+              <div class="ci-val"><a href="mailto:contato@rbservice.com.br">contato@rbservice.com.br</a></div>
+            </div>
+          </div>
+          <div class="contact-info-item reveal reveal-delay-2">
+            <div class="ci-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div class="ci-label">Região de Atendimento</div>
+              <div class="ci-val">Grande Florianópolis</div>
+            </div>
+          </div>
+          <div class="contact-info-item reveal reveal-delay-3">
+            <div class="ci-icon" aria-hidden="true"><i class="fab fa-instagram"></i></div>
+            <div>
+              <div class="ci-label">Instagram</div>
+              <div class="ci-val">@rbservics</div>
+            </div>
+          </div>
+        </address>
+
+        <!-- Form -->
+        <div class="form-card reveal reveal-delay-1">
+          <div class="form-progress" id="formProgress" role="progressbar"
+               aria-valuenow="1" aria-valuemin="1" aria-valuemax="3" aria-label="Progresso do formulário">
+            <div class="form-progress-dot active"></div>
+            <div class="form-progress-dot"></div>
+            <div class="form-progress-dot"></div>
+          </div>
+
+          <!-- Step 1 -->
+          <div class="step active" id="step1" role="group" aria-labelledby="step1-heading">
+            <div class="step-heading" id="step1-heading">O que vamos transformar?</div>
+            <div class="step-sub">Conte um pouco sobre o seu projeto.</div>
+            <div class="field">
+              <label for="f-servico">Tipo de serviço</label>
+              <select id="f-servico">
+                <option value="">Selecione...</option>
+                <option>Reforma Completa</option>
+                <option>Drywall &amp; Gesso</option>
+                <option>Elétrica</option>
+                <option>Pintura</option>
+                <option>Ar Condicionado</option>
+                <option>Sistema Web</option>
+                <option>Consultoria</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-metragem">Metragem aproximada (m²)</label>
+              <input type="number" id="f-metragem" placeholder="ex: 120" min="1">
+            </div>
+            <div class="form-nav">
+              <button class="btn-form-next" id="next1" type="button">
+                Próximo <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step" id="step2" role="group" aria-labelledby="step2-heading">
+            <div class="step-heading" id="step2-heading">Prazo e fotos</div>
+            <div class="step-sub">Nos ajude a entender o escopo completo.</div>
+            <div class="field">
+              <label for="f-prazo">Prazo desejado</label>
+              <select id="f-prazo">
+                <option value="">Selecione...</option>
+                <option>Urgente (até 30 dias)</option>
+                <option>1 a 3 meses</option>
+                <option>3 a 6 meses</option>
+                <option>Sem pressa</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Fotos do local (opcional)</label>
+              <div class="upload-area" id="uploadArea" role="button" tabindex="0"
+                   aria-label="Clique para enviar fotos">
+                <div class="upload-icon" aria-hidden="true"><i class="fas fa-cloud-upload-alt"></i></div>
+                <div class="upload-text" id="uploadText">
+                  <strong>Clique para enviar</strong> ou arraste as fotos<br>
+                  <small>JPG, PNG, PDF — até 10MB</small>
+                </div>
+                <input type="file" id="f-upload" multiple accept="image/*,.pdf"
+                       style="display:none" aria-hidden="true">
+              </div>
+            </div>
+            <div class="form-nav">
+              <button class="btn-form-prev" id="prev2" type="button">
+                <i class="fas fa-arrow-left" aria-hidden="true"></i> Voltar
+              </button>
+              <button class="btn-form-next" id="next2" type="button">
+                Próximo <i class="fas fa-arrow-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step" id="step3" role="group" aria-labelledby="step3-heading">
+            <div class="step-heading" id="step3-heading">Finalizar</div>
+            <div class="step-sub">Seus dados para contato.</div>
+            <div class="field">
+              <label for="f-nome">Seu nome</label>
+              <input type="text" id="f-nome" placeholder="Como prefere ser chamado?" autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="f-tel">WhatsApp</label>
+              <input type="tel" id="f-tel" placeholder="(48) 9xxxx-xxxx" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="f-desc">Descreva seu projeto</label>
+              <textarea id="f-desc" placeholder="Conte mais detalhes sobre o que deseja transformar..."></textarea>
+            </div>
+            <div class="form-nav">
+              <button class="btn-form-prev" id="prev3" type="button">
+                <i class="fas fa-arrow-left" aria-hidden="true"></i> Voltar
+              </button>
+              <button class="btn-form-submit" id="submitBtn" type="button">
+                Enviar Orçamento <i class="fas fa-paper-plane" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Success state -->
+          <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
+            <div class="success-icon" aria-hidden="true"><i class="fas fa-check-circle"></i></div>
+            <h3>Mensagem Enviada!</h3>
+            <p>Hudson entrará em contato em breve.<br>Fique à vontade para chamar no WhatsApp.</p>
+          </div>
+
+        </div><!-- /.form-card -->
+      </div><!-- /.contact-wrap -->
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════ -->
+  <footer>
+    <div class="section-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">RB SERVICE</div>
+        <p class="footer-copy">© 2026 RB Service — Reformas de Alto Padrão</p>
+        <div class="footer-social">
+          <a href="https://wa.me/5548984927764" target="_blank" rel="noopener noreferrer"
+             aria-label="WhatsApp da RB Service"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/rbservice_/" target="_blank" rel="noopener noreferrer"
+             aria-label="Instagram da RB Service"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="mailto:contato@rbservice.com.br" aria-label="E-mail da RB Service"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>OBRAS SEM PESADELOS — FLORIANÓPOLIS, SC — DESDE 2010</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── WHATSAPP FLOAT ──────────────────────────────── -->
+  <a class="wa-float"
+     href="https://wa.me/5548984927764?text=Ol%C3%A1!%20Encontrei%20o%20site%20e%20quero%20um%20or%C3%A7amento."
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Fale com um Especialista no WhatsApp">
+    <div class="wa-icon" aria-hidden="true"><i class="fab fa-whatsapp"></i></div>
+    <span class="wa-label">Falar agora</span>
+  </a>
+
+  <!-- ── SCRIPTS ────────────────────────────────────── -->
+  <script src="main.js"></script>
+
+</body>
+</html>
+
