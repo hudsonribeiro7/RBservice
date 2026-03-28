@@ -50,42 +50,97 @@
 /* ============================================================
    MOBILE MENU
 ============================================================ */
+/* ── MOBILE MENU ─────────────────────────────────────────────
+   Gerencia abertura/fechamento com:
+   - aria-expanded no botão hamburger
+   - aria-hidden no menu e overlay
+   - Trap de foco (Tab/Shift+Tab dentro do menu)
+   - Fechamento via Escape, overlay, e links internos
+──────────────────────────────────────────────────────────── */
 (function initMobileMenu() {
   const hamburger  = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
   const overlay    = document.getElementById('overlay');
   const menuClose  = document.getElementById('menuClose');
 
-  if (!hamburger || !mobileMenu) return;
+  if (!hamburger || !mobileMenu || !overlay || !menuClose) return;
 
+  // ── Elementos focáveis dentro do menu (trap de foco)
+  const getFocusableEls = () =>
+    [...mobileMenu.querySelectorAll(
+      'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    )].filter(el => !el.closest('[aria-hidden="true"]'));
+
+  // ── Abre o menu
   function openMenu() {
     mobileMenu.classList.add('open');
     overlay.classList.add('open');
+    hamburger.classList.add('open');
+
     hamburger.setAttribute('aria-expanded', 'true');
-    menuClose.focus();
+    hamburger.setAttribute('aria-label', 'Fechar menu');
+    mobileMenu.removeAttribute('aria-hidden');
+    overlay.removeAttribute('aria-hidden');
+
+    // ✅ Foco no primeiro elemento do menu ao abrir (acessibilidade)
+    const focusable = getFocusableEls();
+    if (focusable.length) focusable[0].focus();
+
+    document.body.style.overflow = 'hidden'; // ✅ evita scroll do body por baixo
   }
 
+  // ── Fecha o menu
   function closeMenu() {
     mobileMenu.classList.remove('open');
     overlay.classList.remove('open');
+    hamburger.classList.remove('open');
+
     hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'Abrir menu');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    overlay.setAttribute('aria-hidden', 'true');
+
+    hamburger.focus(); // ✅ retorna foco ao botão que abriu o menu
+    document.body.style.overflow = '';
   }
 
-  hamburger.addEventListener('click', openMenu);
+  // ── Trap de foco dentro do menu
+  function trapFocus(e) {
+    if (e.key !== 'Tab') return;
+    const focusable = getFocusableEls();
+    if (!focusable.length) return;
+
+    const first = focusable[0];
+    const last  = focusable[focusable.length - 1];
+
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  }
+
+  // ── Eventos
+  hamburger.addEventListener('click', () =>
+    mobileMenu.classList.contains('open') ? closeMenu() : openMenu()
+  );
+
   menuClose.addEventListener('click', closeMenu);
   overlay.addEventListener('click', closeMenu);
 
-  // Close on any link click
-  mobileMenu.querySelectorAll('a').forEach((a) => {
-    a.addEventListener('click', closeMenu);
-  });
+  // ✅ Fecha ao clicar em qualquer link interno
+  mobileMenu.querySelectorAll('a[href]').forEach(link =>
+    link.addEventListener('click', closeMenu)
+  );
 
-  // Keyboard: Escape to close
-  document.addEventListener('keydown', (e) => {
+  // ✅ Fecha com tecla Escape
+  document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && mobileMenu.classList.contains('open')) closeMenu();
+    if (mobileMenu.classList.contains('open')) trapFocus(e);
   });
 })();
-
 /* ============================================================
    NAVBAR — scroll style + active link
 ============================================================ */
